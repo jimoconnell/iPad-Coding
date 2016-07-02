@@ -5,6 +5,8 @@ https://github.com/jimoconnell/iPad-Coding
 
 I've had a 64GB iPad 2 that was under-utilized, mainly living near my bed, where it served as an alarm clock and a way to play Pandora while I fell asleep.  This being a waste of usable technology, I decided to factory wipe it and epurpose it as a mini-workstation that wouldn't weigh me down.
 
+I recently got a Raspberry Pi 3 and installed Raspbian Linux on it, so I wanted to use my iPad as a convenient, portable workstation for writing code on it.  It works equally well, though, when I'm writing code for one of my 'real' servers too. 
+
 ##Keyboards
 Now, coding using the on-screen keyboard would be a hellish way to live your life, but fortunately, the iPad has bluetooth, so you can connect any bluetooth keyboard.  I had one of those aluminum Apple keyboards and that connected well and worked perfectly, but did not lend itself to being tossed in a messenger bag with the iPad, as errant keystrokes woke the iPad, drained the battery and would manage to take dozens and dozens of random screen captures.
 
@@ -21,7 +23,7 @@ With SSH working, I had a good, reliable way to do quite a bit of what I need to
 There are a lot of text editors for the iPad, but I wanted one that would work with git and not add a lot of steps to my workflow.  A thread on Reddit recommended the combination of WorkingCopy (git client) and Textastic (TextMate for iPad, basically) for editing.  
 
 ##Working Copy Git App
-[Working Copy](http://workingcopyapp.com) has a free version that lets you check out repositories, but not check in changes.  While this would be useful to some, I decided to buy the paid version for $14.99 and have not regretted it in the least.  Working copy will become the cornerstone of your workflow on the iPad, both with GitHub as well as privately-hosted repos. (There is an 'Enterprise Version" that lets you get the full-featured version in a single step, but I do not believe it offers any additional features, it's just a convenience for deploying throughout a company.)
+[Working Copy](http://workingcopyapp.com) has a free version that lets you check out repositories, but not push changes back to the repo on GitHub.  While this would be useful to some, I decided to buy the paid version for $14.99 and have not regretted it in the least.  Working copy will become the cornerstone of your workflow on the iPad, both with GitHub as well as privately-hosted repos. (There is an 'Enterprise Version" that lets you get the full-featured version in a single step, but I do not believe it offers any additional features, it's just a convenience for deploying throughout a company.)
 
 Once you have Working Copy, authorize it against your GitHub account and clone or create a repo.  Now, it may appear that you can edit right there in WorkingCopy, but you really want to fire up an a real editor at this point.  Put WorkingCopy in the background and open up Textastic.  
 
@@ -31,13 +33,20 @@ Working Copy is where you'll manage your git repositories, but if you're using G
 ##Textastic Text Editor App
 Get the $10 upgrade for Textastic.  I can't remember exactly what's different between the paid and unpaid versions, but the developers deserve the love.
 
-My first instinct was to first open up Textastic, create a file, then check it in to git.  This is *not* the best way to go about it.  Start from Working Copy.  Open your repo and click the "+" mark to create a new file. Once you type the name, hit enter and the file will be created.  Switch over to Textastic and the file will be available from the file chooser.
+My first instinct was to first open up Textastic, create a file, then check it in to git.  This is *not* the best way to go about it.  
+
+Start from Working Copy.  
+
+Open your repo and click the "+" mark to create a new file. Once you type the name, hit enter and the file will be created.  Switch over to Textastic and the file will be available from the file chooser.
 (Yes, you *can* create files in Textastic, but it's more difficult to get them into Working Copy afterwards, so don't bother doing it this way.)
 
 What also threw me a bit was when I looked for the save button.  There is none.  You edit to your heart's content, then switch back to WorkingCopy.  Looking at the repository view, you'll see that it has seen the changes and gives you a simple way to commit your changes. 
 
 ##Byword Markdown Editor
 GitHub projects default to displaying a README as the top page of your project and they use Markdown syntax for formatting, but I'm a real newbie when it comes to Markdown, so I decided to look for an editor that would let me work visually, rather than just monospaced text and formatting codes. 
-[Byword](https://bywordapp.com/) is the app to get.  It's a great Markdown editor, but as it uses IOS's feature for opening iCloud and Dropbox files, it can also open files in the git repo you've cloned in Working Copy.
+[Byword](https://bywordapp.com/) is the app to get.  It's a great Markdown editor, but as it uses IOS's feature for opening iCloud and Dropbox files, it can also open files in the git repo you've cloned in Working Copy. This is crucial for the workflow I am developing.
 If you're new to Markdown, keep the [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) handy. 
 
+##Other Utilities
+[Fing](https://itunes.apple.com/us/app/fing-network-scanner/id430921107?mt=8) is a network scanning utility that is free and near-perfect.  What's it do? It scans your local network and tells you what machines are live and what services they are running.  This can be very handy if you plug in a new Raspberry Pi and want to log in, but you've forgotten its IP address. (Hint: It may be called 'raspberry pi.local' if you have Bonjour networking enabled.) 
+[VNC Viewer](https://itunes.apple.com/us/app/vnc-viewer/id352019548?mt=8) is the VNC client that I use when I need to save myself from plugging a monitor and keyboard into my Raspberry Pi to do something that's easier to do graphically, or when giving a demo. Using the mouse is initially not intuitive, but you will grow to appreciate it very quickly.
